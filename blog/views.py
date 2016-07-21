@@ -17,6 +17,7 @@ import base64
 import uuid
 import os
 from boto.s3.connection import S3Connection, Bucket, Key
+import sys
 
 AWS_ACCESS_KEY = os.environ['AWS_ACCESS_KEY']
 AWS_SECRET_KEY = os.environ['AWS_SECRET_KEY']
@@ -25,6 +26,8 @@ AWS_BUCKET_NAME = 'cloudimgs'
 def upload_img(request):
     if request.is_ajax():
         if request.method == 'POST':
+            print(AWS_ACCESS_KEY)
+            sys.stdout.flush()
             uuid_key = uuid.uuid4()
             uuid_key = str(uuid_key)
             uuid_key = uuid_key[0:8]
