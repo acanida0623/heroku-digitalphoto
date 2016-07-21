@@ -26,8 +26,6 @@ AWS_BUCKET_NAME = 'cloudimgs'
 def upload_img(request):
     if request.is_ajax():
         if request.method == 'POST':
-            print(AWS_ACCESS_KEY)
-            sys.stdout.flush()
             uuid_key = uuid.uuid4()
             uuid_key = str(uuid_key)
             uuid_key = uuid_key[0:8]
