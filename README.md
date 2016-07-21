@@ -4,49 +4,33 @@ This web app allows for cloud storing of images on an s3 cloud server. The user 
 
 ## Live Demo
 
-* Live Demo: [digitalphoto.cloud](https://www.digitalphoto.cloud)
+* Live Demo: [digitalphoto.cloud](https://digitalphotocloud.herokuapp.com/admin/)
 
 
-## Installation & Requirements
+## Local Installation & Requirements
 
 * Python 3.5 required [docs.python.org/3/using](https://docs.python.org/3/using/mac.html)
 
-* Run pip install - in root directory
+* Run pip install -r requirements.txt in root directory after setting up a virtual environment
 
 * Run npm install - in root directory
 
-
-## Data Model:
-
-* UserProfile
-    * user = OneToOne(User)
-	* profile_picture
-* Image
-  * author = ForeignKey(UserProfile)
-  * url
-  * album_name
-  * created_date
-* Album
-  * author = ForeignKey(UserProfile)
-  * shared_users
-  * images = ManyToMany(Image)
-  * name
-  * created_date
+* Use webpack to edit any code in index.js
 
 ## Technical Components:
 * Front End
-  * HTML/class
+  * REACT JS
+    - Used for rendering entire front-end HTML
+    - Quick virtual DOM manipulations  
   * JAVASCRIPT
-   * AJAX
-   * REACT JS
-   * Some JQuerY
+   - AJAX
+   - JQuerY
+  * CSS3
 * Back End
   * Python
-    - All server side code will be written in python
-  * Amazon S3 cloud server
-    - this will handle the storage of all images/files
-  * Docker virtual machine
-    - will be used to create a virtual environment, allowing the python based server app to run in production
-  * Digital Ocean
-    - Used to host the app to a navigable ip on the web
-
+    - Django application
+  * Postgresql database
+    - Stores user account information as well as image storing information
+  * Amazon S3 cloud server database
+    - used to store all images on cloud server
+  * Heroku Deployment

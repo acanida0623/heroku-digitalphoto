@@ -6,3 +6,5 @@ venv
 __pycache__
 local_settings.py
 node_modules
+history.txt
+historydeployment.txt
