@@ -18,10 +18,8 @@ import uuid
 import os
 from boto.s3.connection import S3Connection, Bucket, Key
 
-
-
-AWS_ACCESS_KEY = os.environ.get('AWS_ACCESS_KEY')
-AWS_SECRET_KEY = os.environ.get('AWS_SECRET_KEY')
+AWS_ACCESS_KEY = os.environ['AWS_ACCESS_KEY']
+AWS_SECRET_KEY = os.environ['AWS_SECRET_KEY']
 AWS_BUCKET_NAME = 'cloudimgs'
 
 def upload_img(request):
