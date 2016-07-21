@@ -1,0 +1,505 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.col-sm {
+  height: 8em;
+  width: 8em;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+@media screen and (min-width:100px){
+  .main_img_container{
+    position: fixed;
+    top: 15em;
+    right: 40em;
+    height: 35em;
+    border-style: inset;
+    width: 100em;
+    overflow: hidden;
+    background-color: rgba(230, 230, 230, 0.8);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.smaller {
+  height: 7em;
+}
+
+.main_img_container{
+  position: absolute;
+  top: 1.3em;
+
+  width: 100%;
+  height: 35em;
+  border: none;
+  overflow: hidden;
+  background: #000000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.next_img_container{
+  position: absolute;
+  top: 1.3em;
+  width: 100%;
+  height: 35em;
+  border: none;
+  overflow: hidden;
+  background: #000000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.slideshow_container {
+  position: fixed;
+  width: 100%;
+  height: 75vh;
+  background: #000000;
+  top: 4em;
+  left: 0;
+}
+
+.slider_container {
+  position: fixed;
+  width: 100%;
+  height: 9em;
+  bottom: 0px;
+  background-color: #151515;
+  overflow-x: scroll;
+}
+.thumbnail_container {
+}
+
+.thumbnail_img {
+  height: 8em;
+  width: 8em;
+  margin: .5em;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.main_img_right_arrow {
+  opacity: .5;
+  background-image: url("http://i.imgur.com/wYPeDqs.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 4em;
+  width: 4em;
+  position: absolute;
+  bottom: 12em;
+  right: 1em;
+}
+
+
+
+.main_img_left_arrow {
+  opacity: .5;
+  background-image: url("http://i.imgur.com/ulEXknQ.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 4em;
+  width: 4em;
+  position: absolute;
+  bottom: 12em;
+  left: 1em;
+}
+
+.main_img_left_arrow:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.main_img_right_arrow:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#main {
+  width:100vw;
+  top: 0;
+  position: absolute;
+
+}
+#album_holder {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#main_img_container:-webkit-full-screen {
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  border-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+.table_back_color {
+  width:45.5vw;
+  background-color: #F6F6F6;
+  overflow: auto;
+}
+
+.main_table{
+  margin-top: 7em;
+  table-layout: fixed;
+  width:38em;
+  background-color: #F6F6F6;
+  margin-bottom: 4vh;
+}
+
+.main_table2{
+  margin-top:1em;
+  table-layout: fixed;
+  width:38em;
+  background-color: #F6F6F6;
+  margin-bottom: 4vh;
+}
+
+#main_table td{
+  padding: .75em;
+  padding-bottom: 1.5em;
+}
+
+.main_table2 td{
+  padding: .75em;
+  padding-bottom: 1.5em;
+}
+
+.main_table_1row{
+  margin-top: 7em;
+  table-layout: fixed;
+  background-color: #F6F6F6;
+  margin-bottom: 4vh;
+  width:28.25vw;
+}
+
+.user_input {
+
+}
+
+#trash_follow {
+  visibility: collapse;;
+  height: 11vh;
+  width: 11vh;
+  position: absolute;
+  background-image: url('http://i.imgur.com/55WMSWY.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#trash{height: 9.5rem;
+width: 9.5rem;
+background-image: url('http://i.imgur.com/uXoQ3e0.png');
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+#settings_icon{height: 9.5rem;
+width: 9.5rem;
+background-image: url('http://i.imgur.com/BKZ9Se1.png');
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+#add_album {
+  height: 9.5rem;
+  width: 9.5rem;
+  background-image: url('http://i.imgur.com/H1smiYX.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body {
+  background: #151515; /* Old browsers */
+
+  border: 0;
+  margin: 0;
+  width: 98vw;
+	/*cursor: url('http://i.imgur.com/55WMSWY.png'), default;*/
+
+}
+.background {
+
+}
+
+
+.table_holder {
+  position: absolute;
+  top: 12em;
+  left: 0;
+  height: 100vh;
+  border: 0;
+  z-index: 3;
+}
+
+#right{
+  position: fixed;
+  left:50vw;
+  height: 100vh;
+  border: 0;
+  width: 40vw;
+}
+
+#left {
+  overflow: auto;
+
+}
+#upload{
+  position: fixed;
+  top:50vw;
+  height: 100vh;
+  border: 0;
+  width: 50vw;
+}
+
+#drop_here {
+  color: #BDBDBD;
+  font-size: 20pt;
+  margin-left: 26%;
+  margin-top: 10%;
+}
+
+.2{
+  height: 2vw;
+  width: 2vw;
+
+  margin-top: 20rem;
+}
+
+#drop {
+  position: absolute;
+  top: 25vh;
+  min-height: 150px;
+  width: 250px;
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+#page-header-color {
+visibility: collapse;
+}
+
+.logo {
+  background: url("http://i.imgur.com/dkeeBNF.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8em;
+  width: 12em;
+  left: 2%;
+  position: absolute;
+}
+
+.cloud_background {
+  background: url("http://i.imgur.com/bn75hMn.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+
+z-index: 1;
+
+}
+
+.your_albums {
+  left: .5em;
+  top: 12em;
+  margin-top: -.5em;
+  margin-bottom: 2.3em;
+  height: 8em;
+  width: 49vw;
+  position: fixed;
+  z-index: 5;
+  background-color: #FFFFFF;
+}
+
+.your_albums p {
+  font-family: Chela One;
+  font-weight: bolder;
+  font-size: 50pt;
+  color: #0E3191;
+  margin-left: .5em;
+}
+
+.shared_albums p {
+  font-family: Chela One;
+  font-weight: bolder;
+  font-size: 50pt;
+  color: #0E3191;
+  margin-left: .4em;
+}
+
+.shared_albums2 p {
+  font-family: Chela One;
+  font-weight: bolder;
+  font-size: 50pt;
+  color: #0E3191;
+  margin-left: .4em;
+}
+
+
+.album_name {
+  font-family: Chela One;
+  font-weight: bolder;
+  font-size: 50pt;
+  color: #0E3191;
+  margin-left: 2.5em;
+}
+
+.album_name_holder {
+    left: .5vw;
+    top: 12em;
+    margin-top: -.5em;
+    margin-bottom: 4vh;
+    height: 8em;
+    width: 49vw;
+    position: fixed;
+    z-index: 5;
+    background-color: #FFFFFF;
+}
+
+.shared_albums {
+  height: 8em;
+  width: 45em;
+  z-index: 2;
+  background-color: #FFFFFF;
+  margin-left:-.35em;
+  top:11.9em;
+}
+
+.shared_albums2 {
+  background-color: #FFFFFF;
+  height: 8em;
+  width: 45em;
+  z-index: 2;
+  position:fixed;
+  left:1.4em;
+  top:11.9em;
+  visibility: collapse;
+
+}
+
+
+#list img
+  max-height: 10vh;
+  max-width: 14vh;
+}
+
+.delete_img{
+    float:right;
+
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #605F61;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+}
+
+.delete_img:before {
+    content: "×";
+
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.selected{
+    box-shadow:0px 1rem 1rem .5rem #333;
+    border: 1pt blue solid;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+/*.content {
+    margin-left: 40px;
+}*/
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+.back_albums {
+  background-image: url("http://i.imgur.com/u7WY4JQ.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 2em;
+  margin-left: 2em;
+  height: 3.75em;
+  width: 4em;
+  float: left;
+}
+
+.back_albums:hover {
+  cursor: pointer;
+  background-image: url("http://i.imgur.com/kTw03Yu.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

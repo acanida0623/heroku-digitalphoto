@@ -1,0 +1,61 @@
+.upload_main {
+  width: 100%;
+  position: fixed;
+  top: 4em;
+  height: 92vh;
+  border: #FFF 1pt solid;
+  z-index: 4;
+  opacity: .8;
+  background: #000000;
+}
+
+.upload_drop_zone {
+  margin: 0 auto;
+  border: #FFFFFF 5pt dashed;
+  width: 80%;
+  height: 35vh;
+  margin-top: 3.5em;
+  text-align: center;
+}
+
+.upload_drop_zone p {
+  display: inline-block;
+  margin-top: 6%;
+  font-size: 20pt;
+	font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #FFFFFF;
+}
+
+.close_upload {
+  border: #FFF .5pt solid;
+  position: absolute;
+  margin-left: 95%;
+  margin-top: 1%;
+  height: 1.5em;
+  width: 1.5em;
+  color: #FFF;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  cursor: pointer;
+}
+
+.manual_upload {
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 14em;
+}
+
+
+
+.manual_upload label img {
+  height: 10em;
+  width: 14em;
+  cursor: pointer;
+}
+
+.manual_upload > input {
+  display: none;
+}

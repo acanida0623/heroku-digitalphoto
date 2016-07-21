@@ -1,0 +1,97 @@
+.new_album {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+.new_album_form {
+  width: 24em;
+  border-radius: 10px;
+  z-index: 1;
+  background: #000000;
+  margin: 0 auto;
+  margin-top: 12em;
+  height: 320px;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.new_album_form input {
+  font-family:  sans-serif;
+  background: #FFF;
+  color: #000000;
+  width: 22em;
+  border: 0;
+  padding: 15px;
+  font-size: 10pt;
+  font-weight: bold;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.new_album_form button {
+  margin-left: 8em;
+  width: 12em;
+  border-radius: 10px;
+  font-family:  sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: -webkit-linear-gradient(top,  #0067E3,#003473);
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2em;
+}
+
+#create_album_text {
+  position: absolute;
+  margin-top: .25em;
+  margin-left: .5em;
+  color: #ffffff;
+	font-size: 18pt;
+	font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#create_album_name_text {
+  position: absolute;
+  margin-top: 3em;
+  margin-left: 3em;
+  color: #ffffff;
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#create_album_users_text {
+  position: absolute;
+  margin-top: 9em;
+  margin-left: 3em;
+  color: #ffffff;
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.name {
+margin-left: 3.5em;
+margin-top: 6em;
+}
+
+.users {
+  margin-left: 3.5em;
+  margin-top: 13em;
+}
+
+.submit {
+
+}
+
+.create_album {
+
+}

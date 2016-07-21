@@ -1,0 +1,375 @@
+.friends_main_container {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.friend_spacer {
+  visibility: collapse;
+  height: 50em;
+}
+
+.user_friends {
+  width: 49.5em;
+  margin: 0 auto;
+  margin-bottom: 3em;
+  z-index: 2;
+  background: #000000;
+}
+
+.search_friends_spacer {
+  visibility: collapse;
+  height: 4em;
+}
+
+.user_friend_image {
+  width: 16rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 13rem;
+  margin: .25rem;
+  -webkit-animation-name: photo_animation;
+  -webkit-animation-duration: .3s;
+  animation-timing-function: ease-in;
+}
+.friend_requests_received {
+  width: 49.5em;
+  margin: 0 auto;
+  margin-bottom: 10em;
+  z-index: 2;
+  background: #000000;
+}
+
+.friend_requests_received_title_container {
+  width: 49.5em;
+  margin: 0 auto;
+  margin-top: 8em;
+  height: 3.5em;
+  background-color: #000000;
+  border-top-left-radius: 25px;
+  -webkit-border-top-left-radius: 25px;
+  -moz-border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  -webkit-border-top-right-radius: 25px;
+  -moz-border-top-right-radius: 25px;
+}
+
+.friend_requests_received_image {
+  width: 16rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 13rem;
+  margin: .25rem;
+  -webkit-animation-name: photo_animation;
+  -webkit-animation-duration: .3s;
+  animation-timing-function: ease-in;
+}
+
+.friend_requests_received_title {
+	position: absolute;
+	color: #ffffff;
+	font-size: 17pt;
+	font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-top: .5em;
+	margin-left: .5em;
+
+}
+
+.user_friends_title_container {
+  width: 49.5em;
+  margin: 0 auto;
+  margin-top: 8em;
+  height: 3.5em;
+  background-color: #000000;
+  border-top-left-radius: 25px;
+  -webkit-border-top-left-radius: 25px;
+  -moz-border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  -webkit-border-top-right-radius: 25px;
+  -moz-border-top-right-radius: 25px;
+}
+
+.search_friends {
+  width: 49.5em;
+  margin: 0 auto;
+  z-index: 2;
+  background: #000000;
+}
+
+.search_friends_title_container {
+  width: 49.5em;
+  margin: 0 auto;
+  margin-top: 2em;
+  height: 3.5em;
+  background-color: #000000;
+  border-top-left-radius: 25px;
+  -webkit-border-top-left-radius: 25px;
+  -moz-border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  -webkit-border-top-right-radius: 25px;
+  -moz-border-top-right-radius: 25px;
+}
+
+.friend_image {
+  width: 16rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 13rem;
+  margin: .25rem;
+  -webkit-animation-name: photo_animation;
+  -webkit-animation-duration: .3s;
+  animation-timing-function: ease-in;
+}
+
+.friends_title {
+	position: absolute;
+	color: #ffffff;
+	font-size: 17pt;
+	font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-top: .5em;
+	margin-left: .5em;
+
+}
+
+.user_friend_search_image {
+		width: 16rem;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 13rem;
+		margin: .25rem;
+		-webkit-animation-name: photo_animation;
+		-webkit-animation-duration: .3s;
+		animation-timing-function: ease-in; /* Chrome, Safari, Opera */
+
+}
+
+
+#search_friends_global {
+  position: absolute;
+  margin-top: .4em;
+  margin-left: 35em;
+  color: #FFFFFF
+  -webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 16pt;
+  font-weight: bold;
+	background:  url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: none;
+	padding: 9px 10px 9px 32px;
+	width: .25em;
+  outline: none;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+#search_friends_global:focus {
+  -webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+  margin-left: 15em;
+	width: 19em;
+  color: #FFFFFF;
+	border-color: #FFFFFF;
+	-webkit-box-shadow: 0 0 5px #5B97EF;
+	-moz-box-shadow: 0 0 5px #5B97EF;
+	box-shadow: 0 0 5px #5B97EF;
+}
+}
+
+#search_friends_global:-moz-placeholder {
+	color: #FFFFFF;
+}
+#search_friends_global::-webkit-input-placeholder {
+	color: #FFFFFF;
+}
+#search_friends_global:focus::-webkit-input-placeholder {
+	color: #777575;
+}
+
+#search_friends_global:focus:-moz-placeholder {
+	color: #777575;
+}
+
+#search_friends_global:hover {
+  cursor: pointer;
+}
+
+.friend_requests_received_cover {
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-color: #1680FF;
+  pointer-events: none;
+}
+
+.user_friend_search_cover {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #1680FF;
+  text-align: center;
+
+}
+
+
+.friend_requests_received img {
+	opacity: 0;
+	width: 100%;
+  padding-right: .1rem;
+  padding-left: .1rem;
+  padding-top: .2rem;
+}
+
+.friend_requests_received_cover:hover	{
+	opacity: .9;
+	border: none;
+
+	}
+
+  .friend_requests_received_name {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+
+.user_friend_search_cover img {
+	opacity: 0;
+	width: 100%;
+  padding-right: .1rem;
+  padding-left: .1rem;
+  padding-top: .2rem;
+}
+
+.user_friend_search_cover span {
+  position: absolute;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #FFF;
+}
+.user_friend_search_cover:hover	{
+	opacity: .9;
+	border: none;
+	cursor: pointer;
+	}
+
+.user_friend_search_name {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.user_friend_search_name p {
+  display: inline-block;
+  font-size: 17pt;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #FFF;
+}
+
+.friend_requests_received_name p {
+  display: inline-block;
+  font-size: 17pt;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #FFF;
+}
+
+.request_sent_check {
+  background-image: url("http://i.imgur.com/RMhmq2m.png");
+  height: 2em;
+  width: 2em;
+  background-size: cover;
+  margin-left: 7.2em;
+  bottom: 2.5em;
+  position: absolute;
+}
+
+.user_friend_search_cover span {
+  position: absolute;
+  left: 5em;
+  bottom: 1.5em;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #FFF;
+}
+
+.friend_request_accept {
+  background-image: url("http://i.imgur.com/RMhmq2m.png");
+  height: 2em;
+  width: 2em;
+  background-size: cover;
+  margin-left: 4.5em;
+  bottom: 2.5em;
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.friend_request_deny {
+  background-image: url("http://i.imgur.com/gMXt45D.png");
+  height: 2em;
+  width: 2em;
+  background-size: cover;
+  margin-left: 9.5em;
+  bottom: 2.5em;
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.friend_page_information {
+  margin: 0 auto;
+  background: #000000;
+  height: 25em;
+  width: 49.5em;
+  margin-top: 13em;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.friend_page_photo {
+  position: absolute;
+  margin-left: 2em;
+  margin-top: 2.5em;
+  width: 17em;
+  height: 17em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.friend_page_username {
+  position: relative;
+  left: 5em;
+  top: 15em;
+  font-size: 17pt;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #FFF;
+}

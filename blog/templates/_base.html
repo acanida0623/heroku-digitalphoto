@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <!-- <script src="https://fb.me/react-with-addons-0.13.3.min.js"></script> -->
+
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'login.css' %}" />
+    <link rel="stylesheet" href="{% static 'new_album.css' %}" />
+    <link rel="stylesheet" href="{% static 'search_album.css' %}" />
+    <link rel="stylesheet" href="{% static 'header.css' %}" />
+    <link rel="stylesheet" href="{% static 'sort_albums.css' %}" />
+    <link rel="stylesheet" href="{% static 'upload.css' %}" />
+    <link rel="stylesheet" href="{% static 'new_user.css' %}" />
+    <link rel="stylesheet" href="{% static 'react-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'friends.css' %}" />
+    <link rel="stylesheet" href="{% static 'edit_album.css' %}" />
+    <link rel="stylesheet" href="{% static 'messageboard.css' %}" />
+
+  </head>
+
+  <body>
+      {% csrf_token %}
+              {% block content %}
+
+              {% endblock %}
+
+      <script src="{% static 'script/bundle.js' %}"></script>
+      <link rel="stylesheet" href="{% static '1920res.css' %}" />
+  </body>
+</html>

@@ -1,0 +1,145 @@
+.page-header {
+  background: #191919; /* Old browsers */
+  background: -moz-linear-gradient(top, #191919 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #191919 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #191919 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#000000',GradientType=0 );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  top: 0;
+  width:101vw;
+  height: 4em;
+  position: fixed;
+  z-index: 5;
+  border: none;
+
+}
+
+#logo {
+  margin-top: .3em;
+  margin-left: .3em;
+  background-image: url('https://i.imgur.com/mCHQHzL.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 8em;
+  position: absolute;
+}
+
+.top-menu{
+    color: #ffffff;
+    font-size: 15pt;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0 auto;
+
+    width: 18em;
+
+}
+
+#back_albums {
+  position: absolute;
+  height: 100%;
+  margin-left: 1em;
+  width: 4.5em;
+}
+
+#create_new_album {
+  position: absolute;
+  height: 100%;
+  margin-left: 6em;
+  width: 6.3em;
+}
+
+#upload_new {
+  position: absolute;
+  height: 100%;
+  margin-left: 13em;
+}
+
+#friends {
+  position: absolute;
+  height: 100%;
+  margin-left: 12.8em;
+  width: 4.2em;
+}
+
+#friends:hover {
+  cursor: pointer;
+  background: #5B97EF;
+}
+
+#friends p {
+  margin-top: .8em;
+  margin-left: .4em;
+}
+
+#user_commands {
+  position: absolute;
+  height: 100%;
+  right: 2em;
+
+}
+
+
+#user_commands p {
+  margin-top: .8em;
+  margin-left: .4em;
+}
+
+#user_commands_container {
+width: 7em;
+position: absolute;
+margin-top: -.2em;
+right: 0;
+border: none;
+}
+
+#user_commands_logout {
+  width: 100%;
+  height: 2em;
+  margin-top: -.2em;
+  color: #ffffff;
+  font-size: 12pt;
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  z-index: 3;
+}
+
+#user_commands_logout p {
+  margin-top: .2em;
+  margin-left: .4em;
+}
+
+#back_albums:hover {
+  cursor: pointer;
+  background: #5B97EF;
+
+}
+
+#create_new_album:hover {
+  cursor: pointer;
+  background: #5B97EF;
+
+}
+
+#upload_new:hover {
+  cursor: pointer;
+  background: #5B97EF;
+
+}
+
+#back_albums p {
+margin-top: .8em;
+margin-left: .4em;
+}
+
+#create_new_album p{
+margin-top: .8em;
+margin-left: .4em;
+
+}
+
+#upload_new p{
+margin-top: .8em;
+
+}
