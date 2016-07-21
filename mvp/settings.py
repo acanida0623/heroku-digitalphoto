@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'mvp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'digitalphoto',
-        'USER': 'acanida062389',
-        'PASSWORD': 'gta4gta4',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd6l6uc38g8bebt',
+        'USER': 'bbhtqakkfmjzmg',
+        'PASSWORD': 'je49aplX2KyopOq_k5lHSLNl48',
+        'HOST': 'ec2-54-243-47-83.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
