@@ -1988,7 +1988,7 @@ var Sort_User_Albums_Image_Count = React.createClass({
   }
 })
 
-
+var album_loading = true;
 var Min_Container = React.createClass({
   updateSelectedImg: function(source) {
       this.setState({ select_source: source,
@@ -2020,9 +2020,7 @@ var Min_Container = React.createClass({
       }
   },
   updateLoad: function(loading_status) {
-    this.setState({
-      loading:loading_status
-    })
+    album_loading = loading_status;
     load = null;
   },
 
@@ -2086,17 +2084,16 @@ var Min_Container = React.createClass({
     ReactDOM.render(React.createElement(Edit_Album,{album_name:this.state.album_selected,friends_options:this.props.friends_options,current_user:this.state.current_user, user_albums:this.state.user_albums,contr_albums:this.state.contr_albums,album_friends:this.props.album_friends,album_images:this.state.images}), document.getElementById('main'));
   },
   render: function() {
+    var last_image = false;
       if(this.props.images.length === 0) {
-        var last_image = true
-      }else {
-        var last_image = false
-      }  
+        var album_loading = false
+      }
       return <div id="album_holder">
               {
                 (this.state.upload) && <Upload_Imgs updateLoad = {this.updateLoad} current_album = {this.state.album_selected} author={this.state.current_user} closeUpload = {this.closeUpload} />
               }
               {
-                (this.state.loading) && <Loading_Cover />
+                (album_loading) && <Loading_Cover />
               }
               <Header friends_options={this.props.friends_options} current_user={this.state.current_user} contr_albums = {this.state.contr_albums}  user_albums = {this.state.user_albums} />
               <div id="album_title">

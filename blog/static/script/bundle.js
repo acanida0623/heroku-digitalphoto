@@ -2374,6 +2374,7 @@
 	  }
 	});
 
+	var album_loading = true;
 	var Min_Container = React.createClass({
 	  displayName: 'Min_Container',
 
@@ -2407,9 +2408,7 @@
 	    };
 	  },
 	  updateLoad: function updateLoad(loading_status) {
-	    this.setState({
-	      loading: loading_status
-	    });
+	    album_loading = loading_status;
 	    load = null;
 	  },
 
@@ -2476,16 +2475,15 @@
 	  render: function render() {
 	    var _this19 = this;
 
+	    var last_image = false;
 	    if (this.props.images.length === 0) {
-	      var last_image = true;
-	    } else {
-	      var last_image = false;
+	      var album_loading = false;
 	    }
 	    return React.createElement(
 	      'div',
 	      { id: 'album_holder' },
 	      this.state.upload && React.createElement(Upload_Imgs, { updateLoad: this.updateLoad, current_album: this.state.album_selected, author: this.state.current_user, closeUpload: this.closeUpload }),
-	      this.state.loading && React.createElement(Loading_Cover, null),
+	      album_loading && React.createElement(Loading_Cover, null),
 	      React.createElement(Header, { friends_options: this.props.friends_options, current_user: this.state.current_user, contr_albums: this.state.contr_albums, user_albums: this.state.user_albums }),
 	      React.createElement(
 	        'div',
