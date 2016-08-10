@@ -133,7 +133,7 @@ function Load (selected,author,images,user_albums,contr_albums,album_friends) {
                       addEventHandler(reader, 'loadend', function (e, file) {
                           var bin = this.result;
 
-                          uploadImg(bin,load.album_selected,load.album_author,mime_type);
+                          uploadImgur(bin,load.album_selected,load.album_author,mime_type);
 
                       }.bindToEventHandler(file));
                   }
@@ -2603,7 +2603,7 @@ var File_Input = React.createClass({
         var reader = new FileReader();
         var mime_type= file.type;
         reader.onload = (event) => {
-            uploadImg(event.target.result,this.state.album,this.state.author,mime_type);
+            uploadImgur(event.target.result,this.state.album,this.state.author,mime_type);
         };
         reader.readAsDataURL(file);
     },
@@ -2696,7 +2696,7 @@ function uploadImg(base64,album,author,mime_type) {
     });
 }
 
-function uploadImgur(base64,album,author) {
+function uploadImgur(base64,album,author,mime_type) {
     var base64 = base64.replace(/^.*base64,/, '');
 
     $.ajax({
@@ -2706,7 +2706,6 @@ function uploadImgur(base64,album,author) {
             Authorization: 'Client-ID 4d075e399079cdc'
         },
         data: {
-
             image: base64
         }
     }).done((res) => {
