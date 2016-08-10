@@ -2611,35 +2611,40 @@ var file = event.target.files[0];
 
 var img = document.createElement("img");
 var reader = new FileReader();
-reader.onload = function(e) {img.src = e.target.result}
-reader.readAsDataURL(file);
-var canvas = document.createElement('canvas');
-var ctx = canvas.getContext("2d");
-ctx.drawImage(img, 0, 0);
+reader.onload = function(e) {img.src = e.target.result
+  var canvas = document.createElement('canvas');
+  var ctx = canvas.getContext("2d");
+  ctx.drawImage(img, 0, 0);
 
-var MAX_WIDTH = 800;
-var MAX_HEIGHT = 600;
-var width = img.width;
-var height = img.height;
+  var MAX_WIDTH = 800;
+  var MAX_HEIGHT = 600;
+  var width = img.width;
+  var height = img.height;
 
-if (width > height) {
-  if (width > MAX_WIDTH) {
-    height *= MAX_WIDTH / width;
-    width = MAX_WIDTH;
+  if (width > height) {
+    if (width > MAX_WIDTH) {
+      height *= MAX_WIDTH / width;
+      width = MAX_WIDTH;
+    }
+  } else {
+    if (height > MAX_HEIGHT) {
+      width *= MAX_HEIGHT / height;
+      height = MAX_HEIGHT;
+    }
   }
-} else {
-  if (height > MAX_HEIGHT) {
-    width *= MAX_HEIGHT / height;
-    height = MAX_HEIGHT;
-  }
+  canvas.width = width;
+  canvas.height = height;
+  var ctx = canvas.getContext("2d");
+  ctx.drawImage(img, 0, 0, width, height);
+  alert(img)
+  var dataurl = canvas.toDataURL("image/png");
+            alert(dataurl)
+
+
+
 }
-canvas.width = width;
-canvas.height = height;
-var ctx = canvas.getContext("2d");
-ctx.drawImage(img, 0, 0, width, height);
-alert(img)
-var dataurl = canvas.toDataURL("image/png");
-          alert(dataurl)
+reader.readAsDataURL(file);
+
         // var reader = new FileReader();
         // var mime_type= file.type;
         // reader.onload = (event) => {
