@@ -4,7 +4,7 @@ This web app allows for cloud storing of images on an s3 cloud server. The user 
 
 ## Live Demo
 
-* Live Demo: [digitalphoto.cloud](https://digitalphotocloud.herokuapp.com/admin/)
+* Live Demo: [digitalphoto.cloud](https://digitalphotocloud.herokuapp.com/)
 
 
 ## Local Installation & Requirements
