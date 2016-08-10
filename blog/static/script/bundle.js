@@ -2993,6 +2993,8 @@
 	    };
 	  },
 	  onChangeHandler: function onChangeHandler(event) {
+	    var _this23 = this;
+
 	    this.state.updateLoad(true);
 	    var file = event.target.files[0];
 	    var img = document.createElement("img");
@@ -3025,7 +3027,7 @@
 	      ctx.drawImage(img, 0, 0, width, height);
 	      var dataurl = canvas.toDataURL("image/png");
 	      var mime_type = file.type;
-	      uploadImgur(dataurl, this.state.album, this.state.author, "image/png");
+	      uploadImgur(dataurl, _this23.state.album, _this23.state.author, "image/png");
 	    };
 	    reader.readAsDataURL(file);
 	  },

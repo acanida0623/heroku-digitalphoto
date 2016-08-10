@@ -2602,7 +2602,7 @@ var File_Input = React.createClass({
           var file = event.target.files[0];
           var img = document.createElement("img");
           var reader = new FileReader();
-          reader.onload = function(e) {img.src = e.target.result
+          reader.onload = (e)=> {img.src = e.target.result
             var canvas = document.createElement('canvas');
             var ctx = canvas.getContext("2d");
             ctx.drawImage(img, 0, 0);
@@ -2639,7 +2639,6 @@ var File_Input = React.createClass({
                   <label htmlFor="file-input">
                   <img src="http://i.imgur.com/vhoHhIV.png"/>
                   </label>
-
                   <input id="file-input" onChange={this.onChangeHandler} type={"file"}/>
                   </div>
 
