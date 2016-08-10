@@ -2477,11 +2477,10 @@
 	    var _this19 = this;
 
 	    if (this.props.images.length === 0) {
-	      this.setState({
-	        loading: false
-	      });
+	      var last_image = true;
+	    } else {
+	      var last_image = false;
 	    }
-	    var last_image = false;
 	    return React.createElement(
 	      'div',
 	      { id: 'album_holder' },

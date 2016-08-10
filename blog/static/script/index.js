@@ -2087,11 +2087,10 @@ var Min_Container = React.createClass({
   },
   render: function() {
       if(this.props.images.length === 0) {
-        this.setState({
-          loading:false
-        })
-      }
-      var last_image = false
+        var last_image = true
+      }else {
+        var last_image = false
+      }  
       return <div id="album_holder">
               {
                 (this.state.upload) && <Upload_Imgs updateLoad = {this.updateLoad} current_album = {this.state.album_selected} author={this.state.current_user} closeUpload = {this.closeUpload} />
