@@ -99,9 +99,10 @@ def upload_images(request):
 def new_album(request):
     user = UserProfile.objects.get(user__username=request.user)
     req = request.body.decode("utf-8")
+    users = req['users']
     req = eval(req)
     album_name = req['album_name']
-    users = req['users']
+
     print(users)
     if request.method == "POST":
         same_name = Album.objects.filter(name=album_name, author=user)
