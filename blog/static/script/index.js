@@ -2637,7 +2637,7 @@ canvas.width = width;
 canvas.height = height;
 var ctx = canvas.getContext("2d");
 ctx.drawImage(img, 0, 0, width, height);
-
+alert(img)
 var dataurl = canvas.toDataURL("image/png");
           alert(dataurl)
         // var reader = new FileReader();
