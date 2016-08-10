@@ -2086,6 +2086,7 @@ var Min_Container = React.createClass({
     ReactDOM.render(React.createElement(Edit_Album,{album_name:this.state.album_selected,friends_options:this.props.friends_options,current_user:this.state.current_user, user_albums:this.state.user_albums,contr_albums:this.state.contr_albums,album_friends:this.props.album_friends,album_images:this.state.images}), document.getElementById('main'));
   },
   render: function() {
+      alert(this.props.images.length)
       var last_image = false
       return <div id="album_holder">
               {

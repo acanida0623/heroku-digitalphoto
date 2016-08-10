@@ -2476,6 +2476,7 @@
 	  render: function render() {
 	    var _this19 = this;
 
+	    alert(this.props.images.length);
 	    var last_image = false;
 	    return React.createElement(
 	      'div',
