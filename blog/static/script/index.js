@@ -2170,7 +2170,7 @@ var Min_Container = React.createClass({
     window.addEventListener("keydown", this.keyDown, false);
     window.addEventListener("keyup", this.keyUp, false);
   },
-  
+
   componentWillMount: function() {
     this.getUserInfo();
   }
