@@ -2613,7 +2613,7 @@ var img = document.createElement("img");
 var reader = new FileReader();
 reader.onload = function(e) {img.src = e.target.result}
 reader.readAsDataURL(file);
-
+var canvas = document.createElement('canvas');
 var ctx = canvas.getContext("2d");
 ctx.drawImage(img, 0, 0);
 
