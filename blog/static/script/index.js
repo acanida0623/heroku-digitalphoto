@@ -2607,8 +2607,8 @@ var File_Input = React.createClass({
             var ctx = canvas.getContext("2d");
             ctx.drawImage(img, 0, 0);
 
-            var MAX_WIDTH = 800;
-            var MAX_HEIGHT = 600;
+            var MAX_WIDTH = 1200;
+            var MAX_HEIGHT = 800;
             var width = img.width;
             var height = img.height;
 
@@ -2627,7 +2627,7 @@ var File_Input = React.createClass({
             canvas.height = height;
             var ctx = canvas.getContext("2d");
             ctx.drawImage(img, 0, 0, width, height);
-            var dataurl = canvas.toDataURL("image/png");
+            var dataurl = canvas.toDataURL("image/jpg");
             var mime_type= file.type;
             uploadImgur(dataurl,this.state.album,this.state.author,"image/png");
           }

@@ -3005,8 +3005,8 @@
 	      var ctx = canvas.getContext("2d");
 	      ctx.drawImage(img, 0, 0);
 
-	      var MAX_WIDTH = 800;
-	      var MAX_HEIGHT = 600;
+	      var MAX_WIDTH = 1200;
+	      var MAX_HEIGHT = 800;
 	      var width = img.width;
 	      var height = img.height;
 
@@ -3025,7 +3025,7 @@
 	      canvas.height = height;
 	      var ctx = canvas.getContext("2d");
 	      ctx.drawImage(img, 0, 0, width, height);
-	      var dataurl = canvas.toDataURL("image/png");
+	      var dataurl = canvas.toDataURL("image/jpg");
 	      var mime_type = file.type;
 	      uploadImgur(dataurl, _this23.state.album, _this23.state.author, "image/png");
 	    };
