@@ -23,9 +23,9 @@ AWS_S3_HOST = "s3-us-west-2.amazonaws.com"
 SECRET_KEY = '1-s(n3w5tun_#xwiz9$34gc&@85pe#y(5)w#c)rbqf@bwp^$v#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

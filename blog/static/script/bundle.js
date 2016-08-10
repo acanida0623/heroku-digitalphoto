@@ -220,7 +220,12 @@
 	        method: "POST",
 	        data: result
 	      }).done(function (data) {
-	        window.location.href = "/";
+	        var message = JSON.parse(data);
+	        if (message === "Album Name Exists") {
+	          alert(message);
+	        } else {
+	          window.location.href = "/";
+	        }
 	      }).error(function (err) {
 	        console.log(err);
 	      });
@@ -228,9 +233,7 @@
 	  },
 
 	  friendsChange: function friendsChange(event) {
-	    console.log(event);
-	    new_album_friends_selected = event;
-	    alert(new_album_friends_selected);
+	    new_album_friends_selected = event.split(",");
 	    var input_height = $('.Select-control').height();
 	    new_album_height = 320 + input_height + 'px';
 	    $('.new_album_form').css('height', new_album_height);

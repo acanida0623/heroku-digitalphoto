@@ -19,8 +19,8 @@ import os
 from boto.s3.connection import S3Connection, Bucket, Key
 import sys
 
-# AWS_ACCESS_KEY = os.environ['AWS_ACCESS_KEY']
-# AWS_SECRET_KEY = os.environ['AWS_SECRET_KEY']
+AWS_ACCESS_KEY = os.environ['AWS_ACCESS_KEY']
+AWS_SECRET_KEY = os.environ['AWS_SECRET_KEY']
 AWS_BUCKET_NAME = 'cloudimgs'
 
 def upload_img(request):
@@ -99,10 +99,9 @@ def upload_images(request):
 def new_album(request):
     user = UserProfile.objects.get(user__username=request.user)
     req = request.body.decode("utf-8")
-    users = req['users']
     req = eval(req)
     album_name = req['album_name']
-
+    users = req['users']
     print(users)
     if request.method == "POST":
         same_name = Album.objects.filter(name=album_name, author=user)
@@ -117,9 +116,12 @@ def new_album(request):
             new_album.save()
             for name in users:
                 print(name)
-                friend = UserProfile.objects.get(user__username=name)
-                new_album.users.add(friend)
-                new_album.save()
+                try:
+                    friend = UserProfile.objects.filter(user__username=name)
+                    new_album.users.add(friend)
+                    new_album.save()
+                except:
+                    print('')
             new_image = Image(url="http://i.imgur.com/wFpjb8w.jpg",author=user,album_name=new_album.name)
             new_image.save()
             new_album.images.add(new_image)
