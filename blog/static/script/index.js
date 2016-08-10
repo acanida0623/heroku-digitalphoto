@@ -80,6 +80,8 @@ $().ready(function(){
 
 });
 
+//Handles drop loading imgs to album
+
 function Load (selected,author,images,user_albums,contr_albums,album_friends) {
   this.album_selected = selected;
   this.album_author = author;
@@ -122,20 +124,41 @@ function Load (selected,author,images,user_albums,contr_albums,album_friends) {
                   load.images.length = 0;
                   temp_img_updated.map((x) => {
                       load.images.push(x);
-
                   })
-
                   for (var i = 0; i < files.length; i++) {
-                      var file = files[i];
-                      var reader = new FileReader();
-                      var mime_type= files[i].type;
-                      reader.readAsDataURL(file);
-                      addEventHandler(reader, 'loadend', function (e, file) {
-                          var bin = this.result;
+                    var file = files[i];
+                    var img = document.createElement("img");
+                    var reader = new FileReader();
+                    reader.onload = (e)=> {img.src = e.target.result
+                      var canvas = document.createElement('canvas');
+                      var ctx = canvas.getContext("2d");
+                      ctx.drawImage(img, 0, 0);
 
-                          uploadImgur(bin,load.album_selected,load.album_author,mime_type);
+                      var MAX_WIDTH = 1200;
+                      var MAX_HEIGHT = 800;
+                      var width = img.width;
+                      var height = img.height;
 
-                      }.bindToEventHandler(file));
+                      if (width > height) {
+                        if (width > MAX_WIDTH) {
+                          height *= MAX_WIDTH / width;
+                          width = MAX_WIDTH;
+                        }
+                      } else {
+                        if (height > MAX_HEIGHT) {
+                          width *= MAX_HEIGHT / height;
+                          height = MAX_HEIGHT;
+                        }
+                      }
+                      canvas.width = width;
+                      canvas.height = height;
+                      var ctx = canvas.getContext("2d");
+                      ctx.drawImage(img, 0, 0, width, height);
+                      var dataurl = canvas.toDataURL("image/jpg");
+                      var mime_type= file.type;
+                      uploadImgur(dataurl,load.album_selected,load.album_author,"image/png");
+                    }
+                    reader.readAsDataURL(file);
                   }
                   remount_left(load.album_selected,load.album_author,temp_img_updated,load.user_albums,load.contr_albums,author,friends_options,load.album_friends);
                   return false;
@@ -268,18 +291,17 @@ var Edit_Album = React.createClass({
         if (album_name === "") {
           album_name = this.props.album_name
         }
-            var result = {'album_name':this.props.album_name,'users':users,'new_album_name':album_name, csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken').value};
-            result = JSON.stringify(result);
-            $.ajax({
-                url: "/edit/album",
-                method: "POST",
-                data: result
-            }).done(function (data) {
-              window.location.href = "/";
-            }).error(function (err) {
-                console.log(err);
-            });
-
+        var result = {'album_name':this.props.album_name,'users':users,'new_album_name':album_name, csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken').value};
+        result = JSON.stringify(result);
+        $.ajax({
+            url: "/edit/album",
+            method: "POST",
+            data: result
+        }).done(function (data) {
+          window.location.href = "/";
+        }).error(function (err) {
+            console.log(err);
+        });
     },
 
     friendsChange:function(event){
@@ -2141,21 +2163,14 @@ var Min_Container = React.createClass({
   },
 
   deleteImgs: function() {
-          delete_url(img_lst,this.state.album_selected)
+    delete_url(img_lst,this.state.album_selected)
   },
 
   componentDidMount: function() {
     window.addEventListener("keydown", this.keyDown, false);
     window.addEventListener("keyup", this.keyUp, false);
-    // document.getElementById('trash').addEventListener('click', this.deleteImgs, false);
-    // document.getElementById('back_albums').addEventListener('click', this.backAlbums, false);
-    // ReactDOM.render(React.createElement(Rotate_IMG, { img_source: album_lst[0] }), document.getElementById('right'));
-
   },
-  componentWillUnmount: function() {
-    // document.getElementById('trash').removeEventListener('click', this.deleteImgs, false);
-    // document.getElementById('back_albums').removeEventListener('click', this.backAlbums, false);
-  },
+  
   componentWillMount: function() {
     this.getUserInfo();
   }

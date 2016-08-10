@@ -193,13 +193,13 @@ def delete_url(request):
         req = eval(request.body)
         if request.method == 'POST':
             user = UserProfile.objects.get(user__username=request.user)
-            conn = S3Connection(AWS_ACCESS_KEY, AWS_SECRET_KEY)
-            b = Bucket(conn, AWS_BUCKET_NAME)
-            k = Key(b)
+            # conn = S3Connection(AWS_ACCESS_KEY, AWS_SECRET_KEY)
+            # b = Bucket(conn, AWS_BUCKET_NAME)
+            # k = Key(b)
             for x in req['url']:
                 x = str(x)
-                k.key = x[-8:]
-                b.delete_key(k)
+                # k.key = x[-8:]
+                # b.delete_key(k)
                 url_list = Image.objects.get(author=user,url=x,album_name=req['album'])
                 album = Album.objects.get(author=user,name=req['album'])
                 album.images.remove(url_list)
