@@ -2994,11 +2994,7 @@
 	  },
 	  onChangeHandler: function onChangeHandler(event) {
 	    this.state.updateLoad(true);
-
-	    // var file = event.target.files[0];
-	    // var filesToUpload = input.files;
 	    var file = event.target.files[0];
-
 	    var img = document.createElement("img");
 	    var reader = new FileReader();
 	    reader.onload = function (e) {
@@ -3027,18 +3023,11 @@
 	      canvas.height = height;
 	      var ctx = canvas.getContext("2d");
 	      ctx.drawImage(img, 0, 0, width, height);
-	      alert(img);
 	      var dataurl = canvas.toDataURL("image/png");
-	      alert(dataurl);
+	      var mime_type = file.type;
+	      uploadImgur(dataurl, this.state.album, this.state.author, "image/png");
 	    };
 	    reader.readAsDataURL(file);
-
-	    // var reader = new FileReader();
-	    // var mime_type= file.type;
-	    // reader.onload = (event) => {
-	    //     uploadImgur(event.target.result,this.state.album,this.state.author,mime_type);
-	    // };
-	    // reader.readAsDataURL(file);
 	  },
 
 	  render: function render() {
