@@ -596,12 +596,12 @@ def delete_album(request):
             user = UserProfile.objects.get(user__username=request.user)
             album_to_delete = Album.objects.get(author=user,name=req['album'])
             imgs = list(album_to_delete.images.all().order_by('-created_date'))
-            conn = S3Connection(AWS_ACCESS_KEY, AWS_SECRET_KEY)
-            b = Bucket(conn, AWS_BUCKET_NAME)
-            k = Key(b)
+            # conn = S3Connection(AWS_ACCESS_KEY, AWS_SECRET_KEY)
+            # b = Bucket(conn, AWS_BUCKET_NAME)
+            # k = Key(b)
             for x in imgs:
-                k.key = x.url[-8:]
-                b.delete_key(k)
+                # k.key = x.url[-8:]
+                # b.delete_key(k)
                 x.delete()
             album_to_delete.delete()
             user = str(request.user)

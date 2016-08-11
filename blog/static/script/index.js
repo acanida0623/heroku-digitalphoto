@@ -204,7 +204,7 @@ var New_Album = React.createClass({
             }).done(function (data) {
               var message = JSON.parse(data);
               if (message === "Album Name Exists") {
-                alert (message)
+                alert (album_name + " is already the name of one of your albums! Please choose a different name!");
               }else {
                 window.location.href = "/";
               }
