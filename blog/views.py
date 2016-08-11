@@ -102,18 +102,13 @@ def new_album(request):
     req = eval(req)
     album_name = req['album_name']
     users = req['users']
-    print(users)
     if request.method == "POST":
         same_name = Album.objects.filter(name=album_name, author=user)
-        print(same_name.name)
-        print(album_name)
-        try:
-            if album_name == same_name.name:
+        if same_name.exists():
+            for x in same_name:
                 error = "Album Name Exists"
-                return HttpResponse(
-                json.dumps(error)
-                )
-        except:
+                return HttpResponse(json.dumps(error))
+        else:
             new_album = Album(author=user,name=album_name)
             new_album.save()
             for name in users:
