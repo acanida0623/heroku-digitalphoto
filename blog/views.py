@@ -105,6 +105,8 @@ def new_album(request):
     print(users)
     if request.method == "POST":
         same_name = Album.objects.filter(name=album_name, author=user)
+        print(same_name.name)
+        print(album_name)
         try:
             if album_name == same_name.name:
                 error = "Album Name Exists"
